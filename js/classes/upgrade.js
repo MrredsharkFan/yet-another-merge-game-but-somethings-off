@@ -10,7 +10,7 @@ class Upgrade {
         if (config.onBuy !== undefined) {
             this.onBuy = config.onBuy;
         }
-        this.maxLevel = (config.maxLevel !== undefined) ? config.maxLevel : Infinity;
+        this.maxLevel = 100000;
 
         this.effect = new Decimal(0);
         this.effectNext = new Decimal(0);

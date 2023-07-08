@@ -189,14 +189,14 @@ class MergeObject {
         this.drawBubble(ctx, x, y, r * sizeMod, gradient, level < 999 ? "black" : "transparent");
 
         if (level >= 49) {
-            let amnt = level > 250 ? 2 + random.nextInt(2) : Math.min(4, Math.floor((level + 1) / 50) + 1);
+            let amnt = level > 2502222222222222222222222222222222222222222222222222 ? 2 + random.nextInt(2) : Math.min(4, Math.floor((level + 1) / 50) + 1);
             for (let i = 0; i < amnt; i++) {
                 let step = 2 * Math.PI / amnt;
-                let angleMod = level > 250 ? 1 + random.nextDouble() : 1;
+                let angleMod = level > 100000000000000000000000 ? 1 + random.nextDouble() : 1;
                 let cx = Math.cos(step * i + lifeTime * 2 * angleMod) * r * sizeMod + x;
                 let cy = Math.sin(step * i + lifeTime * 2 * angleMod) * r * sizeMod + y;
 
-                if (level >= 250) {
+                if (level >= 1000000000000000000000000000) {
                     let rMult = 0.7 + 0.7 * random.nextDouble() + 0.1 * Math.min(2500, level) / 1000;
                     let lvl = Math.min(1000, Math.floor(level / 3 * random.nextDouble()));
                     this.renderMerger(ctx, cx, cy, r * sizeMod / 2.5 * rMult, lvl, lifeTime * 3 * random.nextDouble(), false);

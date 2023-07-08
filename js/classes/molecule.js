@@ -22,11 +22,15 @@ class Molecule {
 
     //includes any upgrade effects
     getMergesNeeded() {
-        return Math.round(this.baseMergesNeeded * game.molecules.getMergeReduction());
+        let b = Math.round(this.baseMergesNeeded * game.molecules.getMergeReduction());
+        if (b < 1){
+            return 1
+        }
+        else return b
     }
 
     getPower() {
-        return Math.min(10, 1 + this.level * 0.0001);
+        return Math.min(10, 1 + Math.sqrt(this.level));
     }
 
     getValue() {
